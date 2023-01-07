@@ -1,0 +1,14 @@
+---
+title: "Blog"
+searchable: false
+---
+
+import BlogIndex from "@components/blog-index";
+import styles from "./index.module.css";
+import { inter as Inter } from "../theme.config";
+
+<div className={styles.contentContainer}>
+  <h1 className={`${styles.headline} ${Inter.className}`}>AmpersandBot Blog</h1>
+  <p style={{ fontWeight: 800 }}>All the news, etc.</p>
+  <BlogIndex />
+</div>

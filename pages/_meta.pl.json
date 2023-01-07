@@ -1,0 +1,28 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Strona główna"
+  },
+  "docs": {
+    "title": "Dokumentacja",
+    "type": "page"
+  },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "about": {
+    "title": "O nas",
+    "type": "page"
+  },
+  "website_link": {
+    "title": "Strona AmpersandBota",
+    "href": "https://ampersandbot.xyz",
+    "type": "page",
+    "newWindow": true
+  }
+}

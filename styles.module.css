@@ -1,0 +1,6 @@
+:global(.dark) .title {
+    color: #fff;
+}
+:global(.light) .title {
+    color: #121e8a;
+}

@@ -1,0 +1,27 @@
+---
+title: "Strona główna"
+---
+
+import styles from "./index.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import { inter as Inter } from "../theme.config";
+
+<div className={styles.contentContainer}>
+  <Image
+    src="https://cdn.discordapp.com/avatars/645314415578841101/80aa7d2c39e4fa10cf8141d0154093e6.png?size=4096"
+    alt="icon"
+    width={64}
+    height={64}
+    style={{
+      borderRadius: "18px",
+    }}
+  />
+  <h1 className={`${styles.headline} ${Inter.className}`}>
+    Dokumentacja AmpersandBota
+  </h1>
+  <p>Twój bot na Discord. To jest jego strona dokumentacji.</p>
+  <Link href="/docs/intro" className={styles.cta}>
+    Przejdź <span>→</span>
+  </Link>
+</div>
