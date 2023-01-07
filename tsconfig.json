@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "module": "esnext",
     "resolveJsonModule": true,
-    "paths": {
+    "paths": {k
       "@components/*": ["components/*"]
     }
   },
