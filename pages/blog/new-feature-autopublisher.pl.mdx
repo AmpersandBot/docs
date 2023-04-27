@@ -1,0 +1,40 @@
+---
+image: https://assets.vercel.com/image/upload/v1630059453/swr/v1.png
+description: "Witajcie w nowej dokumentacji oraz blogu! Jest to pierwszy wpis, który ma na celu zaprezentowanie nowej struktury dokumentacji oraz bloga. W tym wpisie omówimy nowe funkcjonalności, które zostały dodane do dokumentacji oraz bloga."
+date: 27 kwietnia 2023
+---
+
+import Authors, { Author } from "@components/authors";
+
+# Nowa funkcja: Autopublisher
+
+<Authors published="Opublikowano" date="27 kwietnia 2023" by="przez">
+    <Author name="ciach" link="https://twitter.com/ciach0_" />
+</Authors>
+
+Witajcie w kolejnej aktualizacji! Dziś dodaliśmy do bota autopublisher - funkcję, która będzie automatycznie publikować wiadomości na kanałach ogłoszeniowych.
+Ten post będzie opisywał działanie funkcji, oraz krok po kroku jak skonfigurować autopublisher.
+
+## Jak działa autopublisher?
+Jeśli użytkownik wyśle wiadomość na kanał ogłoszeniowy, bot automatycznie ją wychwytuje i publikuje.
+
+## Dostępne opcje
+_Dla poradnika użyjmy dwuznaku `a!` jako ustaloną wartość prefixu._
+- `a!autopublisher` - wyświetla aktualną konfigurację autopublisher'a oraz dostępne opcje
+- `a!autopublisher <on/off>` - włącza/wyłącza autopublisher'a
+- `a!autopublisher list [add/remove <#kanał>]` - wyświetla listę kanałów ogłoszeniowych, lub dodaje/usuwa kanał z listy
+- `a!autopublisher list clear` - czyści listę kanałów ogłoszeniowych
+- `a!autopublisher logs <#kanał>` - ustawia kanał, na którym będą wysyłane logi
+- `a!autopublisher logs disable` - wyłącza wysyłanie logów
+- `a!autopublisher mode <mode>` - ustawia tryb autopublisher'a
+<details>
+    <summary>Dostępne tryby</summary>
+    - `all` - publikuje wszystkie wiadomości
+    - `ignore` - ignoruje wszystkie kanały oprócz tych na liście
+    - `reverse` - ignoruje kanały na liście
+</details>
+
+## Zakończenie
+Dziękujemy za przeczytanie tego poradnika oraz używanie naszego bota! Jeśli masz jakieś pytania, możesz je zadać na naszym [serwerze wsparcia](https://discord.gg/ggvm5GKbev).
+
+Życzymy miłego dnia ~ Zespół AmpersandBota.
