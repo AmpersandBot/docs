@@ -1,7 +1,10 @@
 import { getPagesUnderRoute } from "nextra/context";
 import Link from "next/link";
 
-export default function BlogIndex({ more = "Read more" }) {
+export default function BlogIndex({
+  more = "Read more",
+  lastUpdated = "Last updated:",
+}) {
   return getPagesUnderRoute("/blog").map((page) => {
     // Alias `<a>` to avoid it being replaced by MDX components.
     const A = "a";
@@ -28,8 +31,12 @@ export default function BlogIndex({ more = "Read more" }) {
         {/* @ts-ignore */}
         {page.frontMatter?.date ? (
           // @ts-ignore
-          <p className="post-created-date">{page.frontMatter.date}</p>
+          <p className="post-created-date">
+            {/* @ts-ignore */}
+            {lastUpdated} {page.frontMatter.date}
+          </p>
         ) : null}
+        {/* @ts-ignore */}
         <style jsx>
           {`
             .post-title {

@@ -7,6 +7,7 @@ export default function Authors({
   return (
     <div className="authors">
       {published} {date} {by} {children}
+      {/* @ts-ignore */}
       <style jsx>
         {`
           .authors {
@@ -28,6 +29,7 @@ export function Author({ name, link }) {
       <a key={name} href={link} target="_blank" className="author-link">
         {name}
       </a>
+      {/* @ts-ignore */}
       <style jsx>
         {`
           .author-link {
