@@ -92,7 +92,7 @@ const config: DocsThemeConfig = {
     return (
       <>
         <Image
-          src="https://cdn.discordapp.com/avatars/645314415578841101/80aa7d2c39e4fa10cf8141d0154093e6.png?size=4096"
+          src="https://cdn.discordapp.com/avatars/645314415578841101/a56f7eb6256059b86386878c6e3326ba.webp?size=1024"
           alt="logo"
           width={32}
           height={32}

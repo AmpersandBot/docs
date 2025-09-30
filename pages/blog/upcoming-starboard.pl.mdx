@@ -1,0 +1,74 @@
+---
+image: https://assets.vercel.com/image/upload/v1630059453/swr/v1.png
+description: "W tym poście omówiona została kolejna nadchodząca funkcja bota - Starboard. Opisuje on, co robi Starboard oraz jak można go skonfigurować na swoim serwerze."
+date: 30 września 2025
+---
+
+import Image from "next/image";
+import Authors, { Author } from "@components/authors";
+
+# Nadchodząca funkcja: Starboard
+
+<Authors published="Opublikowano" date="30 września 2025" by="przez">
+    <Author name="ciach" link="https://twitter.com/ciach0_" />
+</Authors>
+
+Czas na kolejną aktualizację! W tym poście przyjrzymy się nowej wersji bota v5 oraz czego można się w niej spodziewać. No więc, bez zbędnego owijania w bawełnę, zaczynajmy!
+
+## Informacje wstępne
+**Aktualizacja v5 skupia się na komendach ukośnikowych. Komendy z prefiksem zostaną więc usunięte wraz z wprowadzeniem do bota panelu konfiguracyjnego na stronie internetowej.**
+
+AmpersandBot v5 został przepisany od nowa do języka C#, aby mógł szybciej działać i być bardziej stabilny.
+
+## Jak ustawić Starboard?
+Wchodzimy do panelu konfiguracyjnego. Logujemy się, następnie wybieramy serwer, który chcemy skonfigurować. Na sam koniec wybieramy zakładkę **Starboard**.
+<br/>
+<Image src="/starboard_pl.png" alt="DashboardImage" width={1000} height={500} style={{ borderRadius: "6px" }} />
+
+Na początek włączamy Starboard.
+<br />
+<Image src="/starboard_enable_pl.png" alt="DashboardImage" width={180} height={68} style={{ borderRadius: "6px" }} />
+
+Potem dodajemy nową konfigurację.
+<br />
+<Image src="/starboard_new_config_pl.png" alt="DashboardImage" width={264} height={156} style={{ borderRadius: "6px" }} />
+
+Starboard pozwala na dostosowanie działania funkcji. Wszystkie funkcje opisujemy poniżej.
+<br />
+<Image src="/starboard_config_pl.png" alt="DashboardImage" width={512} height={256} style={{ borderRadius: "6px" }} />
+
+<details>
+    <summary>Opcje konfiguracji</summary>
+    - `Kanał Starboardu` - na tym kanale będą wysyłane wiadomości, które spełnią kryteria ustawione niżej
+    - `Emoji` - pozwala ustawić emoji, która będzie wykrywana i ile potrzeba reakcji tą emoji, aby wiadomość została wysłana na wyżej ustawiony kanał
+    - `Opcje` - przełączniki pozwalające na dostosowanie działania Starboardu, więcej informacji niżej
+    <details>
+        <summary>Opcje</summary>
+        - `Zezwól na samodzielne reakcje` - pozwala użytkownikowi reagować na swoje własne wiadomości; reakcja dodana przez użytkownika zostanie usunięta jeśli ta opcja jest wyłączona
+        - `Aktualizuj wiadomość na bieżąco` - gdy ta opcja jest włączona, AmpersandBot będzie starał się aktualizować wiadomości dodane do danego Starboardu oraz kasować usunięte
+        - `Ignoruj boty` - tej opcji nie trzeba wyjaśniać; gdy opcja jest włączona, reakcje botów nie będą wliczane do progu reakcji
+        - `Auto-Gwiazdka` - AmpersandBot będzie dodawał automatycznie ustawioną reakcję do nowych wiadomości; do działania tej opcji tryb ograniczeń kanałów musi być ustawiony na **Obserwuj**, o której zostało wspomniane niżej
+    </details>
+    - `Ograniczenia Kanałów` - zachowanie funkcji zmienia się w zależności od kanału, na którym została wywołana
+    <details>
+        <summary>Ograniczenia kanałów</summary>
+        - `Wyłącz` - funkcja działa na wszystkich kanałach
+        - `Obserwuj` - funkcja działa tylko na wybranych kanałach
+        - `Ignoruj` - funkcja działa na wszystkich kanałach, z wyjątkiem wybranych
+    </details>
+    - `Ograniczenia Ról` - to samo co Ograniczenia Kanałów, tylko że zależne od tego czy ktoś ma daną rolę
+    <details>
+        <summary>Ograniczenia Ról</summary>
+        - `Wyłącz` - działa dla wszystkich użytkowników, niezależnie od posiadanych ról
+        - `Obserwuj` - działa tylko dla użytkowników z danymi rolami
+        - `Ignoruj` - działa dla wszystkich użytkowników, z wyjątkiem tych z danymi rolami
+    </details>
+</details>
+
+## Ważne
+Jeśli wiadomość znajduje się na kanale ograniczonym wiekowo, wiadomość zostanie przesłana na Starboard tylko wtedy, kiedy on też jest kanałem ograniczonym wiekowo.
+
+## Zakończenie
+Dziękujemy za przeczytanie tego poradnika oraz używanie naszego bota! Jeśli masz jakieś pytania, możesz je zadać na naszym [serwerze wsparcia](https://discord.gg/ggvm5GKbev).
+
+Życzymy miłego dnia ~ Zespół AmpersandBota.

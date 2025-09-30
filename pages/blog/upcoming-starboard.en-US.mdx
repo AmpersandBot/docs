@@ -1,0 +1,74 @@
+---
+image: https://assets.vercel.com/image/upload/v1630059453/swr/v1.png
+description: "This post outlines the next upcoming feature of the bot - Starboard. It describes what Starboard does and how to configure it on your server."
+date: September 30th, 2025
+---
+
+import Image from "next/image";
+import Authors, { Author } from "@components/authors";
+
+# Upcoming feature: Starboard
+
+<Authors date="September 30th, 2025">
+    <Author name="ciach" link="https://twitter.com/ciach0_" />
+</Authors>
+
+Time for another update! In this post, we will take a look at the new v5 version and the things we can expect from it. So, without further ado, let's get started!
+
+## Preliminary information
+**The v5 update focuses on slash commands. Prefixed commands will therefore be removed with the introduction of a dashboard on the bot's website.**
+
+AmpersandBot v5 has been rewritten from the ground up in C#, which means that the bot will be much faster and more stable.
+
+## How to configure a Starboard?
+Open the dashboard. Log in and then select the server you want to configure. As the final step we select the **Starboard** tab.
+<br/>
+<Image src="/starboard_en.png" alt="DashboardImage" width={1000} height={500} style={{ borderRadius: "6px" }} />
+
+First, we enable Starboard.
+<br />
+<Image src="/starboard_enable_en.png" alt="DashboardImage" width={180} height={68} style={{ borderRadius: "6px" }} />
+
+Then we add a new configuration.
+<br />
+<Image src="/starboard_new_config_en.png" alt="DashboardImage" width={264} height={156} style={{ borderRadius: "6px" }} />
+
+Starboard allows us to customize how the feature is working. All the features are outlined below.
+<br />
+<Image src="/starboard_config_en.png" alt="DashboardImage" width={512} height={256} style={{ borderRadius: "6px" }} />
+
+<details>
+    <summary>Configuration options</summary>
+    - `Starboard Channel` - new messages will be sent to this channel when they meet the criteria set below
+    - `Emoji` - allows to set the emoji to detect and how many reactions of this emoji the message needs to be sent to the channel selected aboce
+    - `Options` - switches that allow to customize how Starboard works, more information below
+    <details>
+        <summary>Options</summary>
+        - `Allow self-reaction` - allows the user to react to their own messages; their reaction will be removed when this option is disabled
+        - `Update message` - when this option is enabled, AmpersandBot will try to update the messages added to a Starboard and remove the ones that have been deleted
+        - `Ignore bots` - self-explanatory; when the option is enabled, bot reactions will not be counted toward the reaction threshold
+        - `Auto-Star` - AmpersandBot will automatically add the selected reaction to new messages; for this option to work, the channel restriction mode must be set to **Observe**, which has been explained below
+    </details>
+    - `Channel Restrictions` - the behavior of the feature will vary depending on the channel on which it was called
+    <details>
+        <summary>Channel restrictions</summary>
+        - `Off` - the feature works on every channel
+        - `Observe` - the feature works only on selected channels
+        - `Ignore` - the feature works on every channel, except for the selected ones
+    </details>
+    - `Role Restrictions` - the same as Channel Restrictions, but for roles
+    <details>
+        <summary>Role Restrictions</summary>
+        - `Off` - works for everyone, regardless of their roles
+        - `Observe` - works only for users with the selected roles
+        - `Ignore` - works for everyone, except for users with the selected roles
+    </details>
+</details>
+
+## Important
+If the message is from an age-restricted channel, the message will be sent to the Starboard only when its channel is also age-restricted.
+
+## Final words
+Thanks for reading this post and using our bot! If you have any questions, you can ask them on our [support server](https://discord.gg/ggvm5GKbev).
+
+Have a great day ~ The AmpersandBot Team

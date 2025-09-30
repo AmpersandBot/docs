@@ -5,7 +5,7 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   images: {
-    domains: ["cdn.discordapp.com"],
+    domains: ["cdn.discordapp.com", "localhost"],
   },
   i18n: {
     locales: ["en-US", "pl"],
